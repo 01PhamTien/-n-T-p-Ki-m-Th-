@@ -1,0 +1,131 @@
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Thêm màu nền sáng cho toàn bộ trang */
+}
+
+.quiz-container {
+  width: 700px;
+  padding: 30px;
+  background-color: #ffffff; /* Màu nền sáng cho quiz */
+  border: 1px solid #ddd; /* Viền nhẹ */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Độ đổ bóng mềm mại */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font hiện đại */
+  font-weight: 900;
+}
+
+h2 {
+  text-align: center;
+  color: #e90316; /* Màu xanh lá tươi sáng cho tiêu đề */
+}
+
+.question-container {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f50e0e; /* Màu chữ tiêu đề câu hỏi dễ đọc */
+}
+
+.details-container {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f9f9f9; /* Màu chữ nhẹ nhàng cho phần chi tiết */
+}
+
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answer-button {
+  padding: 12px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Đường viền mượt hơn */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  background-color: #fafafa; /* Nền nhạt cho các nút */
+}
+
+.answer-button:hover {
+  background-color: #e3f2fd; /* Màu nền khi hover */
+}
+
+.answer-button.correct {
+  background-color: #66bb6a; /* Xanh lá tươi sáng cho đáp án đúng */
+  color: white;
+}
+
+.answer-button.incorrect {
+  background-color: #ef5350; /* Đỏ tươi cho đáp án sai */
+  color: white;
+}
+
+.next-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.next-button {
+  padding: 12px 25px;
+  background-color: #000000; /* Màu xanh lá cho nút Next */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Nút Next mềm mại hơn */
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #388e3c; /* Màu tối hơn khi hover */
+}
+
+.correct-answer-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #0a0606; /* Màu chữ nhẹ cho thông tin về đáp án đúng */
+}
+
+.correct-answer strong {
+  color: #000000; /* Màu xanh lá nổi bật cho đáp án đúng */
+}
+
+.result-container {
+  text-align: center;
+  background-color: #f5f5f5; /* Nền nhẹ cho khu vực kết quả */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.result-container p {
+  font-size: 18px;
+  color: #ff0000; /* Màu kết quả dễ đọc */
+}
+/* Thông báo Đúng rồi */
+/* Đảm bảo rằng next-button-container có cấu trúc Flexbox để căn giữa thông báo */
+.next-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Đảm bảo khoảng cách giữa các phần tử */
+}
+
+/* Thông báo Đúng rồi */
+.correct-answer-message-container {
+  margin-top: 10px; /* Tạo khoảng cách giữa nút và thông báo */
+}
+
+.correct-answer-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000e8; /* Màu xanh lá cây để biểu thị đúng */
+  text-align: center; /* Căn giữa thông báo */
+}
+.aaa {
+  color: rgb(255, 255, 255);
+}

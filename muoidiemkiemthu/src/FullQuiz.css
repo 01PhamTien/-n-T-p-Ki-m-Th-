@@ -1,0 +1,365 @@
+/* Định dạng chung cho quiz container */
+.quiz-container {
+    width: 300%;
+    height: 100vh; /* Đặt chiều cao 100% màn hình */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #34495e; /* Nền tối màu cho quiz */
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Đổ bóng cho quiz */
+    color: #ecf0f1; /* Sử dụng màu sáng cho chữ để dễ đọc */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Giữ phần kết quả ở dưới */
+    overflow: hidden; /* Đảm bảo không bị tràn ra ngoài */
+}
+
+/* Câu hỏi và các phần trong quiz */
+.question-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #80bbf7; /* Nền của mỗi câu hỏi */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.question-text {
+    font-size: 1.5rem; /* Tăng kích thước chữ */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ecf0f1; /* Chữ màu sáng hơn */
+}
+
+/* Định dạng các đáp án */
+.answers-container {
+    margin-top: 10px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.answer-option input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.answer-option label {
+    font-size: 1.1rem; /* Tăng kích thước chữ */
+    color: #ecf0f1; /* Chữ màu sáng hơn */
+}
+
+/* Thêm phần cuộn cho quiz */
+.quiz-container form {
+    height: 100%;
+    max-height: 80vh; /* Giới hạn chiều cao để có thể cuộn */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+    padding-right: 20px; /* Đảm bảo có khoảng cách khi cuộn */
+}
+
+/* Định dạng cho nút Next */
+.next-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.next-button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Định dạng cho kết quả quiz */
+.result-container {
+    text-align: center;
+}
+
+.result-container h2 {
+    font-size: 2.5rem; /* Tăng kích thước chữ tiêu đề */
+    color: #1abc9c; /* Màu sáng cho tiêu đề */
+}
+
+/* Thay đổi màu chữ cho phần điểm số */
+.result-container p {
+    font-size: 1.5rem; /* Tăng kích thước chữ kết quả */
+    color: #3498db; /* Màu xanh dương cho điểm số */
+}
+
+/* Thêm phần hiển thị đáp án đúng nếu sai */
+.correct-answer-info {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+}
+
+.correct-answer {
+    font-size: 1.1rem;
+}
+
+.correct-answer strong {
+    font-weight: bold;
+}
+
+/* Thêm các CSS để hiển thị các phần cuộn và làm nổi bật các đáp án sai */
+.quiz-container {
+    font-family: Arial, sans-serif;
+}
+
+.result-container {
+    text-align: center;
+}
+
+.incorrect-answers-container {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #34495e; /* Nền màu tối cho phần đáp án sai */
+}
+
+.incorrect-answers-list {
+    max-height: 400px; /* Chiều cao tối đa */
+    overflow-y: auto; /* Chức năng cuộn */
+    font-size: 1.1rem; /* Tăng kích thước chữ */
+}
+
+.incorrect-answer {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.question-text {
+    font-weight: bold;
+    font-size: 1.2rem; /* Tăng kích thước chữ câu hỏi */
+}
+
+.selected-answer, .correct-answer {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.selected-answer {
+    color: #e74c3c; /* Đỏ cho đáp án sai */
+}
+
+.correct-answer {
+    color: #2ecc71; /* Xanh lá cho đáp án đúng */
+}
+
+.incorrect-answer .selected-answer {
+    color: #e74c3c;
+}
+
+.incorrect-answer .correct-answer {
+    color: #2ecc71;
+}
+
+.answers-container {
+    margin-top: 10px;
+}
+
+.answer-option {
+    margin: 5px 0;
+}
+
+.next-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.next-button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Tăng kích thước chữ nút */
+    border-radius: 5px;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+/* Định dạng câu hỏi và đáp án khi người dùng xem lại kết quả */
+.incorrect-answers-container {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #dadada; /* Nền màu tối cho phần câu hỏi sai */
+}
+
+.incorrect-answers-list {
+    max-height: 400px; /* Chiều cao tối đa */
+    overflow-y: auto; /* Chức năng cuộn */
+    font-size: 1.1rem; /* Tăng kích thước chữ */
+}
+
+.incorrect-answer {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+/* Câu hỏi sau khi hoàn thành */
+.question-text {
+    font-weight: bold;
+    font-size: 1.2rem; /* Tăng kích thước chữ câu hỏi */
+}
+
+/* Đáp án sai và đúng */
+.selected-answer, .correct-answer {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+.selected-answer {
+    color: #e74c3c; /* Đỏ cho đáp án sai */
+}
+
+.correct-answer {
+    color: #44ff00; /* Xanh lá cho đáp án đúng */
+}
+
+/* Thêm màu sắc cho đáp án sai và đúng trong câu hỏi */
+.incorrect-answer .selected-answer {
+    color: #e74c3c;
+}
+
+.incorrect-answer .correct-answer {
+    color: #e60000;
+}
+
+/* Các đáp án của câu hỏi */
+.answers-container {
+    margin-top: 10px;
+}
+
+.answer-option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.answer-option input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    pointer-events: none; /* Vô hiệu hóa việc chọn đáp án khi đã xem lại */
+}
+
+.answer-option label {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    pointer-events: none; /* Vô hiệu hóa việc chọn đáp án khi đã xem lại */
+}
+
+/* Nút Complete Quiz */
+.next-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.next-button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Tăng kích thước chữ nút */
+    border-radius: 5px;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+
+/* Đảm bảo các câu hỏi đã hoàn thành và đáp án được hiển thị một cách rõ ràng và dễ nhìn */
+.incorrect-answer .question-text {
+    font-size: 1.1rem; /* Giảm kích thước chữ câu hỏi để phù hợp */
+}
+
+.incorrect-answer .answers-list {
+    margin-top: 10px;
+}
+
+.correct-answer-info {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+/* Thay đổi chiều cao phần cuộn và margin để phần cuộn lớn hơn */
+.incorrect-answers-list {
+    max-height: 80vh; /* Tăng chiều cao tối đa để phần cuộn lớn hơn */
+    overflow-y: scroll; /* Cho phép cuộn dọc */
+    font-size: 1.2rem; /* Tăng kích thước chữ cho dễ đọc */
+    padding-right: 20px; /* Thêm khoảng cách phải khi cuộn */
+}
+/* Ẩn thanh cuộn trên trình duyệt Webkit (Chrome, Safari, Edge) */
+.incorrect-answers-list::-webkit-scrollbar {
+    display: none;
+}
+/* Tăng kích thước của các câu hỏi và đáp án để dễ nhìn */
+.incorrect-answer .question-text {
+    font-size: 1.3rem; /* Tăng kích thước chữ câu hỏi */
+}
+
+.incorrect-answer .answers-list {
+    margin-top: 15px;
+}
+
+.incorrect-answer .answer-option {
+    margin: 8px 0; /* Tăng khoảng cách giữa các đáp án */
+}
+
+/* Đảm bảo phần cuộn chiếm diện tích lớn hơn */
+.incorrect-answers-container {
+    max-height: 80vh; /* Giới hạn chiều cao để phần này chiếm khoảng 70% chiều cao màn hình */
+}
+
+.answer-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-button.selected {
+    background-color: #e80000; /* Màu xanh cho đáp án đã chọn */
+    color: white;
+  }
+  
+  .answer-button:hover {
+    background-color: #e0e0e0; /* Màu khi hover */
+  }
+  
+  .answer-button.selected:hover {
+    background-color: #45a049; /* Màu khi hover trên đáp án đã chọn */
+  }
+  

@@ -1,0 +1,145 @@
+/* Settings container */
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.settings-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 900;
+}
+
+h2 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Nút câu hỏi */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.question-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 140px;
+}
+
+.question-button:hover {
+  background-color: #00ffff;
+  transform: scale(1.05);
+}
+
+.question-button.selected {
+  background-color: #ff0842; /* Màu xanh đậm cho nút đã chọn */
+}
+
+.question-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Difficulty buttons */
+.difficulty-container {
+  margin-bottom: 30px;
+}
+
+.difficulty-button {
+  background-color: #2196f3;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 160px;
+}
+
+.difficulty-button:hover {
+  background-color: #d10df4;
+  transform: scale(1.05);
+}
+
+.difficulty-button.selected {
+  background-color: #fd0000; /* Màu xanh đậm cho độ khó đã chọn */
+}
+
+.difficulty-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Start button */
+.start-button {
+  background-color: #141414;
+  color: rgb(221, 221, 221);
+  font-size: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 160px;
+  font-weight: 900;
+}
+
+.start-button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+.start-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 500px) {
+  .question-button,
+  .difficulty-button,
+  .start-button {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,90 @@
+/* Container chính của màn hình welcome */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7; /* Màu nền nhẹ nhàng */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tiêu đề */
+.welcome-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* In hoa chữ */
+  letter-spacing: 2px; /* Khoảng cách giữa các chữ cái */
+  transition: color 0.3s ease;
+}
+
+.welcome-container h2:hover {
+  color: #0066cc; /* Đổi màu tiêu đề khi hover */
+}
+
+/* Input nhập tên */
+.name-input {
+  width: 80%;
+  max-width: 450px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng khi input được focus */
+.name-input:focus {
+  border-color: #66b3ff;
+  box-shadow: 0 0 10px rgba(102, 179, 255, 0.6);
+  outline: none;
+}
+
+/* Nút Join */
+.join-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 80%;
+  max-width: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiệu ứng khi hover vào nút */
+.join-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+}
+
+/* Hiệu ứng khi nhấn vào nút */
+.join-button:active {
+  background-color: #004a99;
+  transform: scale(1); /* Khôi phục kích thước khi nhấn */
+}
+
+/* Hiệu ứng loading (nếu cần thêm trong tương lai) */
+.join-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Cải thiện độ rộng của màn hình cho responsive */
+@media (max-width: 600px) {
+  .name-input,
+  .join-button {
+    width: 100%; /* Làm cho các phần tử rộng toàn màn hình trên thiết bị nhỏ */
+  }
+}
